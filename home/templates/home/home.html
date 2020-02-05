@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block content %}
+    <h1>Django app</h1>
+    <h5>Hello, {{ name }}</h5>
+    <h6>Current User - {{ request.user.username }}</h6>
+
+    <a class="btn btn-primary" href="{% url 'create_post_page' %}">Create Post</a>
+{% endblock %}

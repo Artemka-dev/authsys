@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Detail page
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">{{ object.title }}</h1>
+    <h6>{{ object.body }}</h6>
+
+    <a class="btn btn-info" href="{% url 'change_post_page' id=post.id %}">Change this post</a>
+    
+
+{% endblock %}

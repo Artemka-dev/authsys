@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Change Post
+{% endblock %}
+
+{% block content %}
+    {% load crispy_forms_tags %}
+
+    <h2 class="mt-5 mb-5">Change Post Form</h2>
+
+    <form action="{% url 'change_post_page' id=post.id %}" method="post">
+        {% csrf_token %}
+
+        {{ form|crispy }}
+        <button class="btn btn-success">Change Post</button>
+        {% if error %}
+            <small>{{ error }}</small>
+        {% endif %}
+    </form>
+
+{% endblock %}

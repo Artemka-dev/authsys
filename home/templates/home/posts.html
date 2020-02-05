@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Posts page
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Posts page</h1>
+
+    {% for post in posts %}
+        <div class="card mb-4">
+            <div class="card-header">
+              {{ post.date_pub }}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.body }}</p>
+              <a href="{% url 'detail_page' id=post.id %}" class="btn btn-light">Подробнее</a>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
