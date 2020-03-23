@@ -1,0 +1,16 @@
+.block {
+    width: 200px;
+    height: 180px;
+
+    border: 1px solid silver;
+    border-radius: 5px;
+
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.block_image {
+    margin-top: 10px;
+    width: 170px;
+    height: auto;
+}
